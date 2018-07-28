@@ -490,7 +490,7 @@ a[ id= "menu_button_open" ]:target + #header div.icon-default {
 
 .pagecontent {
     color: var(--color-black33);
-    background: var(--color-green);
+    background: var(--color-spotify);
     -webkit-font-smoothing: antialiased;
     font-size: 1.08em;
     text-align: justify;
@@ -559,7 +559,7 @@ a[ class= 'social-links' ]:nth-child(5):hover {
 /* - - - - - - - - - - - - Menu Options - - - - - - - - - - - - */
 /* Question */
 a[ class= 'option-links' ]:nth-child(1):hover {
-    color: var(--color-yellow);
+    color: var(--color-twitter);
     transition: color 0.25s ease, transform .58s ease-out;
     transform-origin: center;
     transform: rotate(360deg);
@@ -573,7 +573,8 @@ a[ class= 'option-links' ]:nth-child(2):hover {
     transform: rotate(490deg);
 }
 
-#option_login:hover {
+.hover_yellow:hover {
+    color: var(--color-yellow);
 }
 
 a[ class= 'option-links' ]:nth-child(3):hover {
