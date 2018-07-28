@@ -12,76 +12,63 @@
         <link href='css/general.css' media='screen' rel='stylesheet' type='text/css'/>
         <link href='css/form.css' media='screen' rel='stylesheet' type='text/css'/>
         <link href='css/category_list.css' media='screen' rel='stylesheet' type='text/css'/>
-        <link href='css/style.css' media='screen' rel='stylesheet' type='text/css'/>
+        <link href='css/modal.css' media='screen' rel='stylesheet' type='text/css'/>
 
         <script src='localstorage.js' type="text/javascript"></script>
         <!-- End websites includes -->
     </head>
     <body>
-        <!--
-        <div class='spacer_top'></div>
-        <div class='backboard'>
-            <header>
-                    <div id='header_top'></div>
-                    <div id='header_mid'>
-                        <div id='header_info'>
-                        <div class='header_info_nav'>
-                            <!--<a href='../../' class='header_info_nav_button'><i class='fas fa-caret-left'></i></a>-->
-                            <!--<div class='header_info_title'>strtpg2</div>-->
-                        <!--
-                        </div>
-                        <div id='search_space'>
-                            <form id='searchbox' method='get' action='https://ddg.gg/?q='>
-                            <input id='search_input' class='search_input' type='text' name='q' target='_blank' placeholder='' autocomplete='off' autofocus>
-                            </form>
-                        </div>
-                        </div>
-                    </div>
-            </header>
+        <div class="md-modal md-effect-12" id="modal-12">
+            <div class="md-content">
+                <h3>Modal Dialog</h3>
+                <div>
+                    <p>This is a modal window. You can do the following things with it:</p>
+                    <ul>
+                        <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+                        <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+                        <li><strong>Close:</strong> click on the button below to close the modal.</li>
+                    </ul>
+                    <button class="md-close">Close me!</button>
+                </div>
+            </div>
         </div>
-        -->
         <header>
             <div id='header_top'>
                 <!-- CONTENT -->
-                <a href='#' style='text-align:center'>
-                </a>
                 <label for="menu_toggle">
-                    <i id='header_button' class='fas fa-bars header_button_menu icon_default' for='menu_toggle'></i>
-                    <!--
-                    <i id='header_button' class='fas fa-times header_button_menu icon_hover' for='menu-toggle'></i>
-                    -->
+                    <i id='header_button_open' class='fas fa-bars header-button-menu icon-default' for='menu_toggle'></i>
                 </label>
                 <input type="checkbox" id="menu_toggle"/>
 
                 <ul id='menu_side'>
-                    <div class='spacer_menu_side'></div>
-                    
-                    <li class='option_menu'><a href="#">Home</a></li>
-                    <li class='option_menu'><a href="#">Social</a></li>
-                    <li class='option_menu'><a href="#">Blog</a></li>
-                    <li class='option_menu'><a href="#">Artists</a></li>
-                    <li class='option_menu'><a href="#">Submit</a></li>
-                    <li class='option_menu'><a href="#">Merch</a></li>
-                    <li class='option_menu'><a href="#">Contact</a></li>
-                    <li class='option_menu'><a href="#">About</a></li>
-                    
-                    <a href="#" class='option_menu'>Home</a>
-                    <a href="#" class='option_menu'>Blog</a>
-                    <a href="#" class='option_menu'>Artists</a>
-                    <a href="#" class='option_menu'>Submit</a>
-                    <a href="#" class='option_menu'>Merch</a>
-                    <a href="#" class='option_menu'>Contact</a>
-                    <a href="#" class='option_menu'>About</a>
+                    <div class='spacer-menu-side'></div>
+                    <a href='#' class='menu-option'>Home</a>
+                    <a href='#' class='menu-option'>Blog</a>
+                    <a href='#' class='menu-option'>Artists</a>
+                    <a href='#' class='menu-option'>Submit</a>
+                    <a href='#' class='menu-option'>Merch</a>
+                    <a href='#' class='menu-option'>Contact</a>
+                    <a href='#' class='menu-option'>About</a>
+                    <ul class='menu-option-bottom'>
+                        <div class='menu-option-links'>
+                            <!--
+                            <a class='option-links md-trigger' data-modal='modal-12' href='#'><i class="far fa-question-circle"></i></i></a>
+                            -->
+                            <a class='option-links' href='#'><i class="far fa-question-circle"></i></i></a>
+                            <a class='option-links' href='#'><i class="fas fa-circle-notch"></i></a>
+                            <a class='option-links' href='#'><i class="fas fa-cog"></i></a>
+                        </div>
+                    </ul>
                 </ul>
 
                 <ul id='menu_top'>
-                    <ul class='option_menu_social'>
-                        <div class='menu_social_links'>
-                            <a href="#"><i class="fab fa-youtube color-youtube"></i></a>
-                            <a href="#"><i class="fab fa-spotify color-spotify"></i></a>
-                            <a href="#"><i class="fab fa-instagram color-instagram"></i></a>
-                            <a href="#"><i class="fab fa-soundcloud color-soundcloud"></i></a>
-                            <a href="#"><i class="fab fa-twitter color-twitter"></i></a>
+                    <ul class='menu-option-social'>
+                        <div class='menu-social-links'>
+                            <a class='social-links' href='#'><i class="fab fa-youtube"></i></a>
+                            <a class='social-links' href='#'><i class="fab fa-spotify"></i></a>
+                            <a class='social-links' href='#'><i class="fab fa-instagram"></i></a>
+                            <a class='social-links' href='#'><i class="fas fa-cloud"></i></a>
+                            <a class='social-links' href='#'><i class="fab fa-twitter"></i></a>
                         </div>
                     </ul>
                 </ul>
@@ -100,14 +87,14 @@
             </div>
             <div id='header_bot'>
                 <!-- CONTENT -->
-                <a href='#scroll_content' style='text-align:center'>
-                    <i id='header_button' class='fas fa-caret-down header_button_scroll'></i>
-                </a>
-
+                <label for="header_toggle">
+                    <i id='header_button' class='fas fa-caret-down header-button-scroll icon-header-default' for='header_toggle'></i>
+                </label>
+                <input type="checkbox" id="header_toggle"/>
             </div>
         </header>
         <content>
-            <div class='spacer_top'></div>
+            <div class='spacer-top'></div>
             <div class='backboard' id='scroll_content'>
                 <div class='pagecontent'>
                     <!-- CONTENT -->
@@ -122,155 +109,6 @@
                     Maecenas ullamcorper lacinia tellus, vel cursus tortor laoreet quis. Nunc volutpat purus in orci lobortis, sed fermentum dolor varius. Aenean ligula sem, elementum sit amet lacinia sit amet, efficitur aliquam ipsum. Maecenas suscipit interdum ligula ac viverra. Maecenas eget rutrum risus, laoreet malesuada lorem. Fusce ornare pellentesque urna ut faucibus. Sed id pellentesque magna, at tristique nibh. Quisque id consequat sapien, ut scelerisque quam. Nulla in ante risus. Sed condimentum sem enim, vitae sodales erat tristique viverra. Quisque consequat massa pretium mi fermentum auctor. Donec vel felis sed dolor porta sagittis quis non lectus. Integer condimentum, nibh sed sollicitudin luctus, odio elit condimentum diam, vel tincidunt augue est non magna. Suspendisse quis dignissim leo, sit amet mollis erat.
                 </div>
             </div>
-                <!--
-                <div class='pagecontent'>
-                    <div id='cat_media' class='category_01'>
-                        <div class='label'>media</div>
-                        <div class='links'>
-                            <a href='https://mailbox.org'>mail</a>
-                            <a href='https://netflix.com'>netflix</a>
-                            <a href='https://youtube.com/feed/subscriptions'>youtube</a>
-                            <a href='https://soundcloud.com/jott_uh_be'>soundcloud</a>
-                            <a href='https://rocketbeans.tv/wochenplan/?details=1'>rbtv</a>
-                            <a href='http://crunchyroll.com'>crunchy</a>
-                            <a href='https://twitch.tv'>twitch</a>
-                            <a href='https://jott-uh-be.bandcamp.com'>bandcamp</a>
-                        </div>
-                    </div>
-                    <div id='cat_social' class='category_01'>
-                        <div class='label'>social</div>
-                        <div class='links'>
-                            <a href='https://pr0gramm.com'>pr0</a>
-                            <a href='https://discordapp.com/channels/@me'>discord</a>
-                            <a href='https://deviantart.com'>deviantart</a>
-                            <a href='https://stackexchange.com'>stackexchange</a>
-                            <a href='https://stackoverflow.com'>stackoverflow</a>
-                            <a href='http://hanfburg.de'>hb</a>
-                            <a href='https://twitter.com'>twitter</a>
-                            <a href='https://instagram.com'>insta</a>
-                        </div>
-                    </div>
-                    <div id='cat_games' class='category_01'>
-                        <div class='label'>games</div>
-                        <div class='links'>
-                            <a href='https://legiontd2.com'>ltd2</a>
-                            <a href='http://crea-turestudios.com/'>session</a>
-                            <a href='https://bungie.net'>destiny2</a>
-                            <a href='https://battlerite.com'>battlerite</a>
-                            <a href='https://docs.google.com/spreadsheets/d/11yn0crhwmH9zs9sTb6vZyyjxF1sJXWyVeTY49c2lfSM/edit#gid=1575270165'>rl pi</a>
-                            <a href="https://humblebundle.com">humble bundle</a>
-                            <a href='https://store.steampowered.com/'>steam</a>
-                            <a href='https://www.gog.com/'>gog</a>
-                            <a href="https://itch.io">itch</a>
-                            <a href='http://opencritic.com/browse?page=0&sort=date&platforms=%5B27%5D&genres=%5B%5D&date=Released'>opencritic</a>
-                        </div>
-                    </div>
-                    <div id='cat_shop' class='category_01'>
-                        <div class='label'>shop</div>
-                        <div class='links'>
-                            <a href='https://www.amazon.de/'>amazon</a>
-                            <a href='https://ebay-kleinanzeigen.de'>kleinanzeigen</a>
-                            <a href='https://www.ebay.de/'>ebay</a>
-                            <a href='https://www.massdrop.com/'>massdrop</a>
-                            <a href='https://www.discogs.com/'>discogs</a>
-                                            <a href='https://www.thomann.de/de/index.html?permsel=1'>thomann</a>
-                        </div>
-                    </div>
-                    <div id='cat_reddit' class='category_01'>
-                        <div class='label'>reddit</div>
-                        <div class='links'>
-                            <a href='https://reddit.com/r/skateboarding/'>shreddit</a>
-                            <a href='https://reddit.com/r/unixporn/'>unixporn</a>
-                            <a href='https://reddit.com/r/MechanicalKeyboards/'>mechanical keyboards</a>
-                            <a href='https://reddit.com/r/startpages/'>startpages</a>
-                            <a href='https://reddit.com/r/LegionTD2/'>ltd2</a>
-                            <a href='https://reddit.com/r/BattleRite/'>battlerite</a>
-                            <a href='https://reddit.com/r/slaythespire/'>slay the spire</a>
-                        </div>
-                    </div>
-                    <div id='cat_code' class='category_01'>
-                        <div class='label'>code</div>
-                        <div class='links'>
-                            <a href='https://github.com/jubit'>github</a>
-                            <a href='https://codepen.io/jub/'>codepen</a>
-                            <a href='https://devdocs.io/'>devdocs</a>
-                            <a href="https://w3schools.com">w3schools</a>
-                            <a href='https://fontawesome.com/'>fontawesome</a>
-                        </div>
-                    </div>
-                    <div id='cat_work' class='category_01'>
-                        <div class='label'>work</div>
-                        <div class='links'>
-                            <a href='https://wiki.bolde.de:444/wordpress/'>bolde wiki</a>
-                            <a href='https://kaseya.bolde.de'>kaseya</a>
-                            <a href='https://kaseya.bolde.de/Dashboard/DashboardView.aspx?id=1039&mode=view'>dashboard</a>
-                            <a href='https://customer.3cx.com'>3cx customer</a>
-                            <a href='https://forum.acronis.com/user/login?a'>acronis forum</a>
-                            <a href='https://drive.terracloud.de/folderstable'>terra cloud</a>
-                            <a href='https://wortmann.de/de-de/profile/snsearch.aspx'>wm sns</a>
-                            <a href='https://catalog.update.microsoft.com/Home.aspx'>muc</a>
-                            <a href='https://cartridge-space.de/leergutankauf-toner.html'>cartridge-space</a>
-                        </div>
-                    </div>
-                    <div id='cat_school' class='category_01'>
-                        <div class='label'>school</div>
-                        <div class='links'>
-                            <a href='https://poly.webuntis.com/WebUntis/?school=rbz-technik#/basic/main'>timetable</a>
-                            <a href='https://moodle.rbz-technik-kiel.de/moodle/login/index.php'>moodle</a>
-                            <a href='https://de.wikipedia.org/wiki/Nassi-Shneiderman-Diagramm'>struktur diagram</a>
-                            <a href='https://de.wikipedia.org/wiki/Netzplantechnik'>netzplantechnik</a>
-                        </div>
-                    </div>
-                    <div id='cat_banking' class='category_01'>
-                        <div class='label'>banking</div>
-                        <div class='links'>
-                            <a href='https://banking.postbank.de/rai/login'>postbank</a>
-                            <a href='https://paypal.com/signin'>paypal</a>
-                            <a href='https://dkb.de/banking'>dkb</a>
-                        </div>
-                    </div>
-                    <div id='cat_misc' class='category_01'>
-                        <div class='label'>misc</div>
-                        <div class='links'>
-                            <a href='http://strtpg.ddns.net'>pi-web</a>
-                            <a href='http://pi.hole'>pi-hole</a>
-                            <a href='http://coder.local/'>pi-coder</a>
-                            <a href='http://fritz.box'>fritz box</a>
-                            <a href="https://dict.leo.org/englisch-deutsch/">leo</a>
-                            <a href='https://privnote.com'>privnote</a>
-                            <a href='http://everynoise.com'>every noise</a>
-                            <a href='https://icloud.com'>icloud</a>
-                            <a href="https://duckduckgo.com/bang">!bangs</a>
-                            <a href="http://colorhunt.co">color hunt</a>
-                            <a href="https://www.colorhexa.com/">color hexa</a>
-                            <a href='https://color.adobe.com/create/color-wheel/'>color wheel</a>
-                            <a href='http://qr-code-generator.com'>qr-gen</a>
-                            <a href='https://ipinfo.io/ip'>ipinfo</a>
-                            <a href="https://wikileaks.org/ciav7p1/cms/page_17760284.html">jap faces</a>
-                            <a href="https://textfac.es">textfaces</a>
-                        </div>
-                    </div>
-                </div>
-                <div class='pagecontent'>
-                    <div id='cat_bookmark' class='category_02'>
-                        <div class='label'>bookmarks</div>
-                        <div class='links'>
-                            <a href='http://keyboard-layout-editor.com/#/gists/bcb3db20b061ab0a8a51acf618b1ab27'>pok3r layout</a>
-                            <a href='http://vortexgear.tw/db/upload/webdata4/6vortex_201711192025078172.pdf'>pok3r manual</a>
-                            <a href='https://zapcables.com/'>zap cables</a>
-                            <a href='https://geekhack.org/index.php?topic=82202.0'>diy coiled cable</a>
-                            <a href='https://flashquark.com/product/pbt-pudding-keycaps-black-and-white-oem-profile-104-keys/'>pudding keycaps</a>
-                            <a href='http://maxkeyboard.com/max-universal-cherry-mx-black-translucent-full-keycap-set-blank.html'>black translucent keycaps</a>
-                            <a href='https://youtube.com/watch?v=CN-jAbtN9HE'>pfp2</a>
-                            <a href='https://superuser.com/questions/123242/can-i-find-the-session-id-for-a-user-logged-on-to-another-machine#469561'>get session-id</a>
-                            <a href='https://msdn.microsoft.com/en-us/library/system.windows.media.brushes(v=vs.110).aspx'>c# brushes</a>
-                            <a href='https://giphy.com/gifs/adventure-time-jake-VJxNm7zrm3K4E'>jake vibes</a>
-                            <a href='https://www.thomas-krenn.com/de/wiki/USV_Grundlagen'>Grundlagen UPS</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            -->
         </content>
         <footer>
             <!-- CONTENT -->
