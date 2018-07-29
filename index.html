@@ -7,8 +7,11 @@
         <!-- This website includes -->
         <!-- External -->
         <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Roboto:900" rel="stylesheet">
+
         <script defer src='https://use.fontawesome.com/releases/v5.2.0/js/all.js'></script>
-        <script src='//code.jquery.com/jquery-1.12.0.min.js'></script>
+        <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
         <!-- Internal -->
         <link href='css/general.css' media='screen' rel='stylesheet' type='text/css'/>
         <link href='css/form.css' media='screen' rel='stylesheet' type='text/css'/>
@@ -28,14 +31,16 @@
                 </div>
                 <ul id='menu_side'>
                     <div class='spacer-menu-side'></div>
-                    <a href='#' class='menu-option hover_yellow'>Home</a>
-                    <a href='#' class='menu-option hover_yellow'>Blog</a>
-                    <a href='#' class='menu-option hover_yellow'>Artists</a>
-                    <a href='#' class='menu-option hover_yellow'>Submit</a>
-                    <a href='#' class='menu-option hover_yellow'>Merch</a>
-                    <a href='#' class='menu-option hover_yellow'>Contact</a>
-                    <a href='#' class='menu-option hover_yellow'>About</a>
-                    <ul class='menu-option-bottom'>
+                    <div id='menu_links' class='hover_yellow'>
+                        <a href='#' class='menu-option'>Home</a>
+                        <a href='#' class='menu-option'>Blog</a>
+                        <a href='#' class='menu-option'>Artists</a>
+                        <a href='#' class='menu-option'>Submit</a>
+                        <a href='#' class='menu-option'>Merch</a>
+                        <a href='#' class='menu-option'>Contact</a>
+                        <a href='#' class='menu-option'>About</a>
+                    </div>
+                    <ul id='option_links'>
                         <div class='menu-option-links'>
                             <a class='option-links' href='#'><i class='fas fa-question-circle'></i></i></a>
                             <a class='option-links' href='#'><i class='fas fa-plus-circle'></i></a>
@@ -45,7 +50,7 @@
                 </ul>
 
                 <ul id='menu_top'>
-                    <ul class='menu-option-social'>
+                    <ul id='menu_social'>
                         <div class='menu-social-links'>
                             <a class='social-links' href='#'><i class='fab fa-youtube'></i></a>
                             <a class='social-links' href='#'><i class='fab fa-spotify'></i></a>
