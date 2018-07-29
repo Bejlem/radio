@@ -19,38 +19,38 @@ function onPointerDown(event){
 window.onload = Initialization;
 
 function Initialization() {
-    toggleContent();
+    //toggleContent();
+    $(headerButtons[5]).removeClass('hide').addClass('fadein');
+    $('#header_title').removeClass('hide').addClass('fadein');
     if( !isMenuShown ) {
         $(headerButtons[0]).removeClass('hide').removeClass('hide-D').addClass('fadein');
         $(headerButtons[1]).addClass('hide-D');
-        window.removeEventListener( 'scroll', No_Scroll );
     } else {
         $(headerButtons[1]).removeClass('hide').removeClass('hide-D').addClass('fadein');
         $(headerButtons[0]).addClass('hide-D');
     }
-    $(headerButtons[5]).removeClass('hide').addClass('fadein');
-    $('#header_title').removeClass('hide').addClass('fadein');
 }
 
 $(document).ready( function () {
 
 });
 
-toggleContent = function (keyframes, options) {
-    if( isHeaderBig ) {
+toggleContent = function () {
+    if( !isHeaderBig ) {
+        // Opening Header
         //window.removeEventListener( 'scroll', No_Scroll );
-        $('header').animate({height: '100vh'}, options);
-        $(headerButtons[4]).animate({top:'-40'}, 300);
-        $(headerButtons[5]).animate({bottom:'10'}, 700);
-        //$(menuButtons[5]).addClass('rotate-180');
+        $('header').animate({height: '100vh'});
+        $(headerButtons[4]).animate({top:'-80'}, 300);
+        $(headerButtons[5]).animate({bottom:'7'}, 700);
     } else {
+        // Closing Header
         //window.addEventListener( 'scroll', No_Scroll );
-        $('header').animate({height:'64'}, options);
-        $(headerButtons[4]).animate({top:'0'}, 700);
-        $(headerButtons[5]).animate({bottom:'-45'}, 300);
-        //$(menuButtons[5]).removeClass('rotate-180');
+        $('header').animate({height:'64'});
+        $(headerButtons[4]).animate({top:'3'}, 700);
+        $(headerButtons[5]).animate({bottom:'-80'}, 300);
     }
     isHeaderBig = !isHeaderBig;
+    //alert('Is the header big = ' + isHeaderBig );
 }
 
 toggleBigMenu = function () {
@@ -65,30 +65,33 @@ toggleBigMenu = function () {
 
 toggleMenu = function () {
     if( isMenuShown ) {
-        if( isMenuBig ) {
-            alert('Menu shown and big');
+        if( isHeaderBig ) {
+            //alert('Hide big Menu');
+            $(menu[0]).animate({left: '-2', top: '-100', height: '0'}, 10);
+            $(menu[1]).animate({left: '-50', width: '0'}, 10);
+            $(headerButtons[0]).animate({left: '20', opacity: '1'}, 200);
+            $(headerButtons[1]).animate({left: '-60'}, 50);
         } else {
+            alert('Hide small Menu');
 
         }
     } else{
-        if( isMenuBig ) {
-            alert('Menu hidden and big');
+        if( isHeaderBig ) {
+            //alert('Show big Menu');
+            $(menu[0]).animate({left: '0', top: '-32', height: '66'}, 10);
+            $(menu[1]).animate({left: '-2', width: '160'}, 100);
+            //$(headerButtons[0]).animate({top: '-40'}, 10);
+            $(headerButtons[0]).animate({left: '140', opacity: '0'}, 10);
+            $(headerButtons[1]).animate({left: '20'}, 100);
         } else {
+            alert('Show small Menu');
 
         }
     }
     isMenuShown = !isMenuShown;
-    isMenuBig = !isMenuBig;
+    //isMenuBig = !isMenuBig;
 }
 
 No_Scroll = function () {
     window.scrollTo(0, 0);
 };
-var Header_Open = function() {
-    $('header').removeClass('header-small');
-    isHeaderBig = true;
-}
-var Header_Close = function() {
-    $('header').addClass('header-small');
-    isHeaderBig = false;
-}
