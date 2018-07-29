@@ -67,10 +67,15 @@ toggleMenu = function () {
     if( isMenuShown ) {
         if( isHeaderBig ) {
             //alert('Hide big Menu');
+            $('#menu_links').animate({left: '-160'}, 450);
             $(menu[0]).animate({left: '-2', top: '-100', height: '0'}, 10);
             $(menu[1]).animate({left: '-50', width: '0'}, 10);
-            $(headerButtons[0]).animate({left: '20', opacity: '1'}, 200);
+            $(headerButtons[0]).animate({left: '24', opacity: '1'}, 200);
             $(headerButtons[1]).animate({left: '-60'}, 50);
+            //$('#menu_options').animate({left: '-200'}, {duration: 10, queue: false});
+            //$('#menu_options').animate({bottom: '-60', left: '0'}, {duration: 500, queue: true});
+            $('#option_links').animate({bottom: '-60'}, 450);
+
         } else {
             alert('Hide small Menu');
 
@@ -82,7 +87,10 @@ toggleMenu = function () {
             $(menu[1]).animate({left: '-2', width: '160'}, 100);
             //$(headerButtons[0]).animate({top: '-40'}, 10);
             $(headerButtons[0]).animate({left: '140', opacity: '0'}, 10);
-            $(headerButtons[1]).animate({left: '20'}, 100);
+            $(headerButtons[1]).animate({left: '24'}, 100);
+
+            $('#menu_links').animate({left: '-15'}, 1200);
+            $('#option_links').animate({bottom: '12'}, 200)
         } else {
             alert('Show small Menu');
 
