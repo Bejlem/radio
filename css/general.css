@@ -6,6 +6,12 @@
 @font-face{
     font-family: 'SIMPLIFICA';
     src: url('../res/SIMPLIFICA-Typeface.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "BebasNeue Bold";
+    src: url('../res/BebasNeue Bold.otf');
 }
 
 @keyframes fadein {
@@ -111,9 +117,8 @@ a {
     transition: color 0.6s ease, text-shadow 200ms, transform 1.25s ease;
 }
 
-a[ class='menu-option' ], a[ class='menu-option' ] {
-    transition: color 0.3s ease;
-
+a[ class='menu-option' ]:hover {
+    color: inherit;
 }
 
 a:hover {
@@ -356,7 +361,7 @@ i[ id= "icon-header-default" ] {
     font-size: 30px;
     box-shadow: 20px 2px 10px 5px var(--color-shadow0);
     box-shadow: 0px 0px var(--color-shadow0);
-    -webkit-transition: width 0.7s ease, left 0.9s ease, box-shadow 0.9s ease;
+    transition: width 0.7s ease, left 0.9s ease, box-shadow 0.9s ease;
     list-style-type: none;
 }
 
@@ -371,8 +376,23 @@ i[ id= "icon-header-default" ] {
     width: 100%;
     background-color: var(--color-black3e);
     font-size: 30px;
-    -webkit-transition: height 0.7s ease, top 0.9s ease, box-shadow 1.5s ease-out;
+    transition: height 0.7s ease, top 0.9s ease, box-shadow 1.5s ease-out;
     list-style-type: none;
+}
+
+#menu_links {
+    position: relative;
+    width: 150px;
+    height: 20px;
+    left: -140px;
+    background-color: #7EDD7E;
+    transistion: left 1.3s ease-in-out;
+    /*font-family:    'BebasNeue Bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    */
 }
 
 .menu-option {
@@ -380,7 +400,8 @@ i[ id= "icon-header-default" ] {
     display: block;
     height: 32px;
     width: 150px;
-    left: -21px;
+    left: -15px;
+    left: 0;
     padding: 8px 0;
     text-align: left;
     margin: 0;
@@ -390,7 +411,7 @@ i[ id= "icon-header-default" ] {
     z-index: 5;
 }
 
-.menu-option-bottom {
+#option_links {
     position: absolute;
     display: block;
     overflow: hidden;
@@ -398,10 +419,12 @@ i[ id= "icon-header-default" ] {
     min-width: 160px;
     left: 0;
     bottom: 12px;
+    bottom: -60px;
     font-size: 38px;
     text-align: left;
     margin: 0;
     border-top: 2px solid var(--color-shadow1);
+    transition: left .7s ease, bottom .9s ease-in-out;
 }
 
 .menu-option-links {
@@ -413,7 +436,7 @@ i[ id= "icon-header-default" ] {
     width: 178px;
 }
 
-.menu-option-social {
+#menu_social {
     height: 32px;
     padding: 18px 0px;
 }
