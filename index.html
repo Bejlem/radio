@@ -6,10 +6,6 @@
         <link id='favicon' rel='icon' type='image/png' href='favicon_1.ico'/>
         <!-- This website includes -->
         <!-- External -->
-        <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Roboto:900" rel="stylesheet">
-
         <script defer src='https://use.fontawesome.com/releases/v5.2.0/js/all.js'></script>
         <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
         <!-- Internal -->
@@ -25,20 +21,22 @@
         <header>
             <div id='header_top'>
                 <!-- CONTENT -->
-                <div class='toggle-menu-big'>
-                    <i id='menu_big_open' class='fas fa-bars header-button-menu icon-default fadein' onmousedown='toggleMenu()'></i>
-                    <i id='menu_big_close' class='fas fa-times header-button-menu icon-hover' onmousedown='toggleMenu()'></i>
+                <div class='toggle-menu'>
+                    <i id='menu_open' class='fas fa-bars header-button-menu icon-default fadein' onmousedown='toggleMenu(this.id)'></i>
+                    <i id='menu_close' class='fas fa-times header-button-menu icon-hover' onmousedown='toggleMenu(this.id)'></i>
                 </div>
+
+                <!-- Side Menu -->
                 <ul id='menu_side'>
                     <div class='spacer-menu-side'></div>
-                    <div id='menu_links' class='hover_yellow'>
-                        <a href='#' class='menu-option'>Home</a>
-                        <a href='#' class='menu-option'>Blog</a>
-                        <a href='#' class='menu-option'>Artists</a>
-                        <a href='#' class='menu-option'>Submit</a>
-                        <a href='#' class='menu-option'>Merch</a>
-                        <a href='#' class='menu-option'>Contact</a>
-                        <a href='#' class='menu-option'>About</a>
+                    <div id='menu_links_side' class='hover_yellow'>
+                        <a href='#' class='menu-option_side'>Home</a>
+                        <a href='#' class='menu-option_side'>Blog</a>
+                        <a href='#' class='menu-option_side'>Artists</a>
+                        <a href='#' class='menu-option_side'>Submit</a>
+                        <a href='#' class='menu-option_side'>Merch</a>
+                        <a href='#' class='menu-option_side'>Contact</a>
+                        <a href='#' class='menu-option_side'>About</a>
                     </div>
                     <ul id='option_links'>
                         <div class='menu-option-links'>
@@ -49,8 +47,18 @@
                     </ul>
                 </ul>
 
+                <!-- Top Menu -->
                 <ul id='menu_top'>
-                    <ul id='menu_social'>
+                    <div id='menu_links_top' class='hover_yellow'>
+                        <a href='#' class='menu-option_top'>Home</a>
+                        <a href='#' class='menu-option_top'>Blog</a>
+                        <a href='#' class='menu-option_top'>Artists</a>
+                        <a href='#' class='menu-option_top'>Submit</a>
+                        <a href='#' class='menu-option_top'>Merch</a>
+                        <a href='#' class='menu-option_top'>Contact</a>
+                        <a href='#' class='menu-option_top'>About</a>
+                    </div>
+                    <ul id='social_links_top'>
                         <div class='menu-social-links'>
                             <a class='social-links' href='#'><i class='fab fa-youtube'></i></a>
                             <a class='social-links' href='#'><i class='fab fa-spotify'></i></a>
@@ -61,12 +69,13 @@
                     </ul>
                 </ul>
 
+
             </div>
             <div id='header_mid'>
                 <!-- CONTENT -->
                 <div class='centered'>
                     <div id='header_title' class='hide'>
-                        Brandname
+                        beat-treat
                     </div>
                 </div>
             </div>
@@ -100,6 +109,18 @@
         </content>
         <footer>
             <!-- CONTENT -->
+            <!-- Bottom Menu -->
+            <ul id='menu_bot'>
+                <ul id='social_links_bot'>
+                    <div class='menu-social-links'>
+                        <a class='social-links' href='#'><i class='fab fa-youtube'></i></a>
+                        <a class='social-links' href='#'><i class='fab fa-spotify'></i></a>
+                        <a class='social-links' href='#'><i class='fab fa-instagram'></i></a>
+                        <a class='social-links' href='#'><i class='fas fa-cloud'></i></a>
+                        <a class='social-links' href='#'><i class='fab fa-twitter'></i></a>
+                    </div>
+                </ul>
+            </ul>
 
         </footer>
     </body>
