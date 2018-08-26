@@ -2,7 +2,7 @@
  * Created by Jub on 28.07.2018.
  */
 
-var isMenuShown = false;
+let isMenuShown = false;
 var isMenuBig = true;
 var isHeaderBig = true;
 headerButtons = ['#menu_open', '#menu_close', '#header_button_open', '#header_button_close'];
@@ -14,12 +14,9 @@ function onPointerDown(event){
     alert('mouse down!');
 }
 
-//window.addEventListener("mousedown", onPointerDown);
-
 window.onload = Initialization;
 
 function Initialization() {
-    //toggleContent();
     $(headerButtons[5]).removeClass('hide').addClass('fadein');
     $('#header_title').removeClass('hide').addClass('fadein');
     if( !isMenuShown ) {
@@ -38,24 +35,23 @@ $(document).ready( function () {
 toggleContent = function () {
     if( !isHeaderBig ) {
         // Opening Header
-        //window.removeEventListener( 'scroll', No_Scroll );
         $('header').animate({height: '100vh'});
         $(headerButtons[2]).animate({top:'-80'}, 300);
         $(headerButtons[3]).animate({bottom:'7'}, 700);
     } else {
         // Closing Header
-        //window.addEventListener( 'scroll', No_Scroll );
         $('#social_links_top').animate({bottom: '68'}, 0);
+        $('#menu_links_top').animate({bottom: '16'}, 200);
         $('header').animate({height:'64'});
         $(headerButtons[2]).animate({top:'3'}, 700);
         $(headerButtons[3]).animate({bottom:'-80'}, 300);
-        $(menu[2]).animate({bottom: '-30', height: '55'}, 10); //
-        $('#social_links_bot').animate({top: '12'}, 200); //
-
+        if( isMenuShown ) {
+            $(menu[2]).animate({bottom: '-30', height: '55'}, 10);
+            $('#social_links_bot').animate({top: '12'}, 200);
+        }
         $(menu[1]).animate({left: '-50', width: '0'}, 355);
     }
     isHeaderBig = !isHeaderBig;
-    //alert('Is the header big = ' + isHeaderBig );
 }
 
 toggleBigMenu = function () {
@@ -69,10 +65,8 @@ toggleBigMenu = function () {
 }
 
 toggleMenu = function (id) {
-    //alert(id);
     if( isMenuShown ) {
         if( isHeaderBig ) {
-            //alert('Hide big Menu');
             if( id != 'menu_big_open') {
                 $('#social_links_top').animate({bottom: '68'}, 10);
                 $('#menu_links_side').animate({left: '-160'}, 450);
@@ -82,13 +76,11 @@ toggleMenu = function (id) {
                 $(headerButtons[0]).animate({left: '24', opacity: '1'}, 200);
                 $(headerButtons[0]).css('cursor', 'pointer');
                 $(headerButtons[1]).animate({left: '-60'}, 50);
-                //$('#menu_options').animate({left: '-200'}, {duration: 10, queue: false});
-                //$('#menu_options').animate({bottom: '-60', left: '0'}, {duration: 500, queue: true});
             }
 
         } else {
-            //alert('Hide small Menu');
             $('#social_links_bot').animate({top: '54'}, 10); //
+            $('#menu_links_top').animate({bottom: '68'}, 100);
             $(menu[0]).animate({top: '-100', height: '0'}, 10);
             $(menu[2]).animate({bottom: '-100', height: '0'}, 10); //
             $(headerButtons[0]).animate({left: '24', opacity: '1'}, 200);
@@ -98,7 +90,6 @@ toggleMenu = function (id) {
         }
     } else{
         if( isHeaderBig ) {
-            //alert('Show big Menu');
             $(menu[0]).animate({top: '-32', height: '66'}, 10);
             $(menu[1]).animate({left: '0', width: '160'}, 100);
             //$(headerButtons[0]).animate({top: '-40'}, 10);
@@ -111,7 +102,6 @@ toggleMenu = function (id) {
             $('#option_links').animate({bottom: '12'}, 200);
 
         } else {
-            //alert('Show small Menu');
             $(menu[0]).animate({top: '-32', height: '66'}, 10);
             $(menu[2]).animate({bottom: '-30', height: '55'}, 10); //
             $(headerButtons[0]).animate({left: '140', opacity: '0'}, 10);
@@ -119,10 +109,10 @@ toggleMenu = function (id) {
             $(headerButtons[1]).animate({left: '24'}, 100);
 
             $('#social_links_bot').animate({top: '12'}, 200); //
+            $('#menu_links_top').animate({bottom: '16'}, 200);
         }
     }
     isMenuShown = !isMenuShown;
-    //isMenuBig = !isMenuBig;
 }
 
 No_Scroll = function () {
