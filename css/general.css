@@ -88,6 +88,7 @@ html {
 }
 
 body {
+    overflow: hidden;
     height: 100%;
     background: linear-gradient(var(--color-black2d), var(--color-black2d));
     background-repeat:no-repeat !important;
@@ -117,7 +118,7 @@ a {
     transition: color 0.6s ease, text-shadow 200ms, transform 1.25s ease;
 }
 
-a[ class='menu-option_side' ]:hover {
+a[ class='menu-option-side' ]:hover, a[ class='menu-option-top' ]:hover {
     color: inherit;
 }
 
@@ -307,6 +308,10 @@ header:hover {
     transform-origin:   center;
 }
 
+.header-button-menu:hover, .header-button-scroll:hover {
+    color: var(--color-text);
+}
+
 #menu_side {
     position: absolute;
     overflow: hidden;
@@ -345,7 +350,7 @@ header:hover {
     /*left: -2px;*/
     right: 0;
     bottom: -30px;
-    height: 55px;
+    /*height: 55px;*/
     height: 0;
     width: 100%;
     background-color: var(--color-black3e);
@@ -368,11 +373,11 @@ header:hover {
     width: 100%;
     height: 32px;
     left: 80px;
-    bottom: 16px;
-    transistion: left .9s ease-in-out;
+    bottom: 68px;
+    transistion: bottom .9s ease-in-out;
 }
 
-.menu-option_side {
+.menu-option-side {
     position: relative;
     display: block;
     height: 32px;
@@ -388,7 +393,7 @@ header:hover {
     z-index: 10;
 }
 
-.menu-option_top {
+.menu-option-top {
     position: relative;
     height: 32px;
     left: 0;
@@ -448,7 +453,6 @@ header:hover {
 
 .menu-social-links {
     text-align: right;
-    /*padding-right: 62px;*/
 }
 
 #seperator_menu {
