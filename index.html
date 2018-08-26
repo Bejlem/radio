@@ -6,6 +6,10 @@
         <link id='favicon' rel='icon' type='image/png' href='favicon_1.ico'/>
         <!-- This website includes -->
         <!-- External -->
+        <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Roboto:900" rel="stylesheet">
+
         <script defer src='https://use.fontawesome.com/releases/v5.2.0/js/all.js'></script>
         <script src='https://code.jquery.com/jquery-1.12.0.min.js'></script>
         <!-- Internal -->
@@ -30,16 +34,19 @@
                 <ul id='menu_side'>
                     <div class='spacer-menu-side'></div>
                     <div id='menu_links_side' class='hover_yellow'>
-                        <a href='#' class='menu-option_side'>Home</a>
-                        <a href='#' class='menu-option_side'>Blog</a>
-                        <a href='#' class='menu-option_side'>Artists</a>
-                        <a href='#' class='menu-option_side'>Submit</a>
-                        <a href='#' class='menu-option_side'>Merch</a>
-                        <a href='#' class='menu-option_side'>Contact</a>
-                        <a href='#' class='menu-option_side'>About</a>
+                        <a href='#' class='menu-option-side'>Home</a>
+                        <a href='#' class='menu-option-side'>Blog</a>
+                        <a href='#' class='menu-option-side'>Artists</a>
+                        <a href='#' class='menu-option-side'>Submit</a>
+                        <a href='#' class='menu-option-side'>Merch</a>
+                        <a href='#' class='menu-option-side'>Contact</a>
+                        <a href='#' class='menu-option-side'>About</a>
                     </div>
                     <ul id='option_links'>
                         <div class='menu-option-links'>
+                            <!--
+                            <a class='option-links md-trigger' data-modal='modal-12' href='#'><i class="far fa-question-circle"></i></i></a>
+                            -->
                             <a class='option-links' href='#'><i class='fas fa-question-circle'></i></i></a>
                             <a class='option-links' href='#'><i class='fas fa-plus-circle'></i></a>
                             <a class='option-links' href='#'><i class='fas fa-cog'></i></a>
@@ -50,13 +57,13 @@
                 <!-- Top Menu -->
                 <ul id='menu_top'>
                     <div id='menu_links_top' class='hover_yellow'>
-                        <a href='#' class='menu-option_top'>Home</a>
-                        <a href='#' class='menu-option_top'>Blog</a>
-                        <a href='#' class='menu-option_top'>Artists</a>
-                        <a href='#' class='menu-option_top'>Submit</a>
-                        <a href='#' class='menu-option_top'>Merch</a>
-                        <a href='#' class='menu-option_top'>Contact</a>
-                        <a href='#' class='menu-option_top'>About</a>
+                        <a href='#' class='menu-option-top'>Home</a>
+                        <a href='#' class='menu-option-top'>Blog</a>
+                        <a href='#' class='menu-option-top'>Artists</a>
+                        <a href='#' class='menu-option-top'>Submit</a>
+                        <a href='#' class='menu-option-top'>Merch</a>
+                        <a href='#' class='menu-option-top'>Contact</a>
+                        <a href='#' class='menu-option-top'>About</a>
                     </div>
                     <ul id='social_links_top'>
                         <div class='menu-social-links'>
@@ -75,7 +82,7 @@
                 <!-- CONTENT -->
                 <div class='centered'>
                     <div id='header_title' class='hide'>
-                        beat-treat
+                        beat treat
                     </div>
                 </div>
             </div>
@@ -84,8 +91,6 @@
                 <label for="header_toggle">
                     <i id='header_button_close' class='fas fa-caret-up header-button-scroll icon-header-default' onmousedown='toggleContent()'></i>
                     <i id='header_button_open' class='fas fa-caret-down header-button-scroll icon-header-hover' onmousedown='toggleContent()'></i>
-                    <!--
-                    -->
                 </label>
                <input type='checkbox' id='header_toggle'/>
             </div>
